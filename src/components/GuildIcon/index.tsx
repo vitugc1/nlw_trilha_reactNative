@@ -5,9 +5,10 @@ import { styles } from "./styles";
 import DiscordPng from '../../assets/discord.png'
 
 export function GuildIcon(){
+
     return (
         <Image 
-        source={DiscordPng} 
+        source={DiscordPng}
         style={styles.image}
         resizeMode="cover"
         />
