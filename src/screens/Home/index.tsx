@@ -70,12 +70,13 @@ export function Home() {
             
             />
             
-            <View style={styles.content}>
+            
                 <ListHeader
                 title="Partidas agendadas"
                 subtitle="Total 6"
                 
                 />
+           
                 <FlatList 
                 data={appointments}
                 keyExtractor={item => item.id}
@@ -89,8 +90,8 @@ export function Home() {
                 ItemSeparatorComponent={() => <ListDiveder />}
                 style={styles.matches}
                 showsVerticalScrollIndicator={false}
+                contentContainerStyle={{paddingBottom: 69}}
                 />
-            </View>
         </Background>
     )
 }

@@ -27,18 +27,26 @@ export function AppointmentCreate() {
         setOpenGuildsModal(true)
     }
 
+    function handleCloseModal() {
+        setOpenGuildsModal(false)
+    }
+
     function handleGuildsSelect(guildSelect: GuildProps) {
         setOpenGuildsModal(false);
         setGuild(guildSelect);
     }
+    function handlecCategorySelect(categoryId: string){
+        setCategory(categoryId)
+    }
+
     
     return (
         <KeyboardAvoidingView
             behavior={Platform. OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}
         >
-        <ScrollView>
-            <Background>
+        <Background>
+            <ScrollView>
                 <Header
                     title="Agendar partida"
                 />
@@ -52,7 +60,7 @@ export function AppointmentCreate() {
 
                 <CategorySelect
                     hasCheckBox
-                    setCategory={setCategory}
+                    setCategory={handlecCategorySelect}
                     categorySelected={category}
                 />
 
@@ -80,7 +88,7 @@ export function AppointmentCreate() {
                     <View style={styles.field}>
                     
                         <View>
-                            <Text style={styles.label}>
+                            <Text style={[styles.label, {marginBottom: 12} ]}>
                                 Dia e mês
                             </Text>
 
@@ -94,7 +102,7 @@ export function AppointmentCreate() {
                         </View>
 
                         <View>
-                            <Text style={styles.label}>
+                            <Text style={[styles.label, {marginBottom: 12} ]}>
                                 Hora e minuto
                             </Text>
 
@@ -134,10 +142,10 @@ export function AppointmentCreate() {
                         </View> 
                 </View>
           
-            </Background>
-        </ScrollView>
+            </ScrollView>
+        </Background>
             
-            <ModalView visible={openGuildsModal}>
+            <ModalView visible={openGuildsModal} closeModal={handleCloseModal} >
                 <Guilds
                     handleGuildSelect={handleGuildsSelect}
                 />
