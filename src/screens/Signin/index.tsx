@@ -11,12 +11,12 @@ import { styles } from './styles'
 import { theme } from '../../global/styles/theme';
 
 export function Signin() {
-    const { loading ,user, signin } = useAuth();
+    const { loading, signIn } = useAuth();
     
  
     async function handlerSignin(){
         try {
-            await  signin();
+            await  signIn();
         } catch (error) {
             Alert.alert('Erro', 'Erro ao realizar o login');
         }

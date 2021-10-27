@@ -4,7 +4,7 @@
   "devToolsPort": 19002,
   "webpackServerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://fz-wqz.anonymous.nlw-trilha-reactnative.exp.direct",
+  "packagerNgrokUrl": "https://packager.fz-wqz.anonymous.nlw-trilha-reactnative.exp.direct",
+  "ngrokPid": 5268
 }

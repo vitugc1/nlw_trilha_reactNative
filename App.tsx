@@ -30,7 +30,7 @@ export default function App() {
             translucent
       />
         <AuthProvider>
-          <Routes />
+            <Routes />
         </AuthProvider>
     </Background>
   )
